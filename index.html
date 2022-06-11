@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Bradley Portfolio</title>
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggler" onclick="openMenu()">
+            <div class="bar half start"></div>
+            <div class="bar"></div>
+            <div class="bar half end"></div>
+        </div>
+        <nav class="top-nav">
+            <ul class="nav-list">
+                <li>
+                    <a onclick="closeMenu()" href="index.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a onclick="closeMenu()" href="#about" class="nav-link">About</a>
+                </li>
+                <li>
+                    <a onclick="closeMenu()" href="#services" class="nav-link">Services</a>
+                </li>
+                <li>
+                    <a onclick="closeMenu()" href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li>
+                    <a onclick="closeMenu()" href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="landing-text">
+            <h1>Bradley Web Dev</h1>
+            <h6>HTML | CSS | REACT | GraphQL</h6>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="profile-img">
+                <img src="pictures/profileImg.JPG" alt="" width="900" height="600">
+            </div>
+            <div class="profile-details">
+                <div class="about-heading">
+                    <h1>About Me</h1>
+                </div>
+                <ul class="about-me-list">
+                    <li>I am an aspiring web developer. Previously, I was a Senior Pharmaceutical Manufacturing Technician. I left a promising career to follow my passion for technology.</li>
+                    <li>I discovered my interest in development when helping my partner set up a <a class="text-link" target="_blank" href="https://vanlifeescape.com">my first website.</a>.</li>
+                    <li>I have learned multiple modern technologies such as React, MongoDB, Firebase and Git, while working on my own projects.</li>
+                    <li>Being good at what I do is important to me, which motivates me to constantly improve my current skills and learn new technologies.</li>
+                </ul>
+                <div class="social-media">
+                    <ul class="nav-list">
+                        <li>
+                            <a target="_blank"  href="https://github.com/DylBrad" class="icon-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank"  href="https://www.linkedin.com/in/dylan-bradley-a77720142/" class="icon-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Skills</h1>
+            </div>
+            <div class="my-skills">
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <h1>HTML</h1>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-css3"></i>
+                    </div>
+                    <h1>CSS</h1>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <h1>JavaScript</h1>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <h1>React</h1>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <h1>Git</h1>
+                </div>
+
+                <div class="skill">
+                    <div class="icon-container">
+                        <span class="iconify" data-icon="simple-icons:graphql"></span>
+                    </div>
+                    <h1>GraphQL</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="pictures/portfilioImg1.jpeg" alt="" height="600" width="900">
+                </div>
+                <div class="portfolio-description">
+                    <h6>Social Media App</h6>
+                    <ul>
+                        <li>A place for motorhome owners to connect with others around the world.</li>
+                        <li>Users can swipe through potential matches.</li>
+                        <li>Built on MERN stack.</li>
+                    </ul>
+                    <a target="_blank"  href="https://github.com/DylBrad/MERN-Motorhome-Swap-App" class="cta">View On GitHub</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="pictures/portfolioImg2.jpg" alt="" height="600" width="900">
+                </div>
+                <div class="portfolio-description">
+                    <h6>E-Commerce Website</h6>
+                    <ul>
+                        <li>E-commerce jewellry website.</li>
+                        <li>Includes login functionality, cart and payment system.</li>
+                        <li>Built using React, QraphQL, Firebase.</li>
+                    </ul>
+                    <a target="_blank"  href="https://github.com/DylBrad/React-Ecommerce-Store" class="cta">View On GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Contact</h1>
+                <p>Email: dylanbradley1@hotmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="copyright">
+        <div class="up" id="up">
+            <a href="index.html">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+            <p>&copy; 2020 Dylan Bradley</p>
+        </div>
+    </footer>
+</body>
+
+<script src="index.js"></script>
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</html>

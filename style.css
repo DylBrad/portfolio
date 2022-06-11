@@ -1,0 +1,379 @@
+/* Globals */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* background: -webkit-radial-gradient(circle, #ced3d6 0%, #ffffff 100%);
+    background: radial-gradient(circle, #ced3d6 0%, #ffffff 100%); */
+    background: url("pictures/sitebg.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text-link {
+    color: purple;
+}
+
+/* Globals End */
+
+/* reusable */
+.container {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading {
+    text-align: center;
+    color: lightgray;
+    font-weight: 300;
+    margin-top: 10rem;
+}
+
+.section-heading h1 {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, .3);
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.has-margin-right {
+    margin-right: 5rem;
+}
+
+/* Header */ 
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.top-nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    background-color: #16162d;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+    z-index: 2;
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 0 2rem;
+}
+
+.nav-link {
+    font-family: 'The Historia Demo', sans-serif;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    /* Gives text a coloured gradient */
+    background: linear-gradient(to top, #f078f0, #faa55f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-nav.open {
+    top: 0;
+    border-radius: initial; /* gives transition animation effect */
+}
+
+.menu-toggler {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open {
+    transform: rotate(-45deg);
+}
+
+.bar {
+    background: linear-gradient(to right, #f078f0, #faa55f);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half {
+    width: 50%;
+}
+
+.bar.start {
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(.54, -.81, .57, .57);
+}
+
+.open .bar.start {
+    transform: rotate(-450deg) translateX(.8rem);
+}
+
+.bar.end {
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(.54, -.81, .57, .57);
+}
+
+.open .bar.end {
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+.landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers perfectly */
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1 {
+    font-size: 6rem;
+    font-family: sans-serif;
+    background: linear-gradient(to top, #f078f0, #faa55f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.landing-text h6 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+@media only screen and (max-width: 600px) {
+    .landing-text {
+        margin-top: 3rem;
+    }
+    .nav-list {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .nav-list li {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* About */
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.about-heading h1 {
+    font-size: 5rem;
+    opacity: .3;
+}
+
+.about-heading h6 {
+    font-size: 1.8rem;
+    opacity: .3;
+}
+
+.about-me-list li {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.about-me-list li:last-child {
+    margin-bottom: 0;
+}
+
+.profile-img {
+    flex: 1;
+    margin-right: 3rem;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.social-media {
+    margin-top: 3rem;
+}
+
+.social-media i {
+    font-size: 2rem;
+    transition: color 650ms;
+}
+
+.fa-github:hover {
+    color: rgb(43, 58, 58);
+}
+
+.fa-linkedin:hover {
+    color: rgb(41, 130, 247);
+}
+@media only screen and (max-width: 600px) {
+    .profile-img {
+        margin-right: 0;
+    }
+    .about .container {
+        flex-direction: column;
+    }
+    .about-heading {
+        margin-bottom: 1rem;
+    }
+    .about-heading h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* My Skills */
+.my-skills {
+    max-width: 990px;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2.5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skill h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2re 0;
+}
+
+.icon-container {
+    width: 7rem;
+    height: 7rem;
+    border: 3px solid #ffe838;
+    background-color: #fd57bf;
+    margin-bottom: 2rem;
+    display: flex;
+    transform: rotate(45deg);
+}
+
+.icon-container i,
+.icon-container svg {
+    color: #ffe838;
+    font-size: 3rem;
+    margin: auto; /* Centers in flex parent div */
+    transform: rotate(-45deg);
+}
+/* My Skills END */
+
+/* Portfolio */
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.portfolio-item:nth-child(2) {
+    margin-top: 5rem;
+}
+.portfolio-item:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-img {
+    flex: 1; /* Gives 50% space */
+    margin-right: 3rem;
+}
+
+.portfolio-description {
+    flex: 1;
+}
+
+.portfolio-description h6 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.3;
+}
+.portfolio-description li {
+    font-size: 1.2rem;
+}
+.cta {
+    line-height: 3;
+}
+@media only screen and (max-width: 600px) {
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-img {
+        margin-right: 0;
+    }
+    .portfolio-item h6 {
+        text-align: center;
+    }
+    .portfolio-item a {
+        margin-left: calc(50% - 50px);
+        font-size: 14px;
+    }
+  }
+/* Portfolio END */
+
+.contact {
+    transform: translateY(-5rem);
+}
